@@ -4,7 +4,7 @@ Convert back and forth between Heroku-style `ENV['DATABASE_URL']` and Rails/Acti
 
 ## Usage
 
-### Get DATABASE_URL from config hash
+### Get `DATABASE_URL` from config hash
 
 You pass it a hash (string or symbol keys, doesn't matter) and it gives you a URL:
 
@@ -15,7 +15,7 @@ You pass it a hash (string or symbol keys, doesn't matter) and it gives you a UR
 
 ### Get config hash from `DATABASE_URL`
 
-Let's assume `ENV['DATABASE_URL']` is set to `postgres://uuu:xxx@127.0.0.1:1234/abc`...
+Let's assume `DATABASE_URL` is set to `postgres://uuu:xxx@127.0.0.1:1234/abc`...
 
     >> DatabaseUrl.active_record_config
     => {:adapter=>"postgres", :host=>"127.0.0.1", :port=>1234, :database=>"abc", :user=>"uuu", :password=>"xxx"}
