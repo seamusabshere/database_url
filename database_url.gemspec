@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = DatabaseUrl::VERSION
   spec.authors       = ["Seamus Abshere"]
   spec.email         = ["seamus@abshere.net"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Convert back and forth between Heroku-style ENV['DATABASE_URL'] and Rails/ActiveRecord-style config/database.yml hashes.}
+  spec.summary       = %q{Convert back and forth between Heroku-style ENV['DATABASE_URL'] and Rails/ActiveRecord-style config/database.yml hashes.}
+  spec.homepage      = "https://github.com/seamusabshere/database_url"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
