@@ -1,3 +1,15 @@
+0.1.0 / 2014-07-12
+
+* Breaking changes
+
+  * replaced .active_record_config(url = nil) with .to_active_record_hash(url = nil)
+  * replaced .database_url(hash) with .to_active_record_url(hash)
+
+* Enhancements
+
+  * .to_sequel_hash(url = nil)
+  * .to_sequel_url(hash)
+
 0.0.1 / 2013-09-19
 
 Initial release!
