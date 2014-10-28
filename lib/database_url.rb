@@ -42,7 +42,7 @@ module DatabaseUrl
       if uri.password
         memo[:password] = uri.password
       end
-      query = CGI.parse uri.query
+      query = CGI.parse uri.query.to_s
       if query.has_key?('encoding')
         memo[:encoding] = query['encoding'][0]
       end

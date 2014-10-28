@@ -1,3 +1,9 @@
+0.1.1 / 2014-10-28
+
+* Bug fixes
+
+  * Don't die if no URL query - fixes #1 thanks @fmasuhr !
+
 0.1.0 / 2014-07-12
 
 * Breaking changes
