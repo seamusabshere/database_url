@@ -1,3 +1,9 @@
+0.1.2 / 2017-06-12
+
+* Enhancements
+
+  * Remove deprec warning on mysql2 - thanks @Paxa ! https://github.com/seamusabshere/database_url/pull/3
+
 0.1.1 / 2014-10-28
 
 * Bug fixes
