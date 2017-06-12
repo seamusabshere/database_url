@@ -6,7 +6,13 @@ require 'cgi'
 module DatabaseUrl
   class << self
     def to_active_record_hash(url = nil)
-      to_hash ACTIVE_RECORD_FIELD_MAP, url
+      result_hash = to_hash ACTIVE_RECORD_FIELD_MAP, url
+
+      if result_hash[:adapter] == 'mysql2'
+        result_hash[:username] = result_hash.delete(:user)
+      end
+
+      result_hash
     end
 
     def to_active_record_url(hash)

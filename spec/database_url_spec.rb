@@ -45,6 +45,18 @@ describe DatabaseUrl do
         encoding: 'latin1',
       }
     end
+
+    it "builds config hashes for mysql2 without warnings" do
+      ENV['DATABASE_URL'] = "mysql2://user:xxx@127.0.0.1/dbname?encoding=utf8" # should be ignored!
+      DatabaseUrl.to_active_record_hash(ENV['DATABASE_URL']).should == {
+        adapter: 'mysql2',
+        host: '127.0.0.1',
+        database: 'dbname',
+        username: 'user',
+        password: 'xxx',
+        encoding: 'utf8',
+      }
+    end
   end
 
   describe 'Sequel' do
